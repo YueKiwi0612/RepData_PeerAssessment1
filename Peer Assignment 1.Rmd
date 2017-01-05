@@ -83,7 +83,7 @@ We will use the new dataset we created before with NAs being filled in. To be be
 rawdata2$daytype <- factor(ifelse(weekdays(rawdata2$date) %in% c("Saturday","Sunday"),
                        "weekend","weekday"))
 ```
-Next, we draw time series plots showing the average number of steps in different 5-minute intervals and different day type.
+Next, we drwill showime series plots showing the average number of steps in different 5-minute intervals and different day type.
 ```{r}
 #time series plots of the average steps taken in each intervals which averaged across all weekdays and weekends
 avgStepsPerIntervalBydaytype <- aggregate(steps ~ interval + daytype, rawdata2, mean)
